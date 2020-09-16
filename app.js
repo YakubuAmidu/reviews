@@ -47,3 +47,11 @@ const info = document.getElementById('info');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('random-btn');
+
+// Set starting item
+let currentItem = 0;
+
+// Load initial item
+window.addEventListener('DOMContentLoaded', function () {
+  console.log('shake bake');
+});
