@@ -52,13 +52,21 @@ const randomBtn = document.querySelector('random-btn');
 let currentItem = 0;
 
 // Load initial item
-window.addEventListener('DOMContentLoaded', function () {});
+window.addEventListener('DOMContentLoaded', function () {
+  showPerson(currentItem);
+});
 
 // Show person based on item
 function showPerson(person) {
-  const item = reviews[currentItem];
+  const item = reviews[person];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
 }
+
+// Show next person
+nextBtn.addEventListener('click', function () {
+  currentItem++;
+  showPerson(currentItem);
+});
